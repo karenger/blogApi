@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Blog Appi</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--<script src="access/js/jquery.min.js"></script>-->
+    <!--<script src="access/js/jquery.tmpl.min.js"></script>-->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+    <script src="access/js/login-api.js"></script>
+    <script src="access/js/login.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">    
+    <LINK REL=StyleSheet HREF="css/login.css" TYPE="text/css" >
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+    <script>
+        var token = window.localStorage.getItem("token");
+        if (token != null) {
+
+            //validar que este activo
+            window.location = "index.html";
+
+        }
+//         else{function deshabilitaRetroceso(){
+//     window.location.hash="no-back-button";
+//     window.location.hash="Again-No-back-button" //chrome
+//     window.onhashchange=function(){window.location.hash="no-back-button";}
+// }}
+</script>
+
+</head>
+
+<body >
+    <div class="login-wrap" >
+        <div class="login-html" >
+
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">Sign In</label>
+            
+
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="group">
+                        
+                        <label for="user" class="label">Email</label>
+                        <input id="email" type="text" class="input">
+                    </div>
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="password" type="password" class="input" data-type="password"></br></br>
+                        <a class="label" href="signup.html">+Sign up</a>
+                    </div>
+                    <div class="group">
+                            
+                    
+                        <input type="button" class="button" id="btnLogin"value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                </div>
+        
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Blog APP</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <!--<script src="access/js/jquery.min.js"></script>-->
+    <!--<script src="access/js/jquery.tmpl.min.js"></script>-->
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+    <script src="access/js/login-api.js"></script>
+    <script src="access/js/login.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <LINK REL=StyleSheet HREF="css/index.css" TYPE="text/css">
+        <LINK REL=StyleSheet HREF="css/menu.css" TYPE="text/css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+        window.onload = function logout(params) {
+            var token = window.localStorage.getItem("token");
+            LoginApi.getpost(token) 
+            $("#logout").click(() => {
+                LoginApi.logout(token)
+                    .then(function (data) {
+                        window.localStorage.removeItem("token");
+                        window.location = "login.html";
+                    })
+                    .catch(error => console.log("Error: ", error));
+            });
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
+            <div id='cssmenu'>
+                    <ul>
+                       <li class='active'><a href='#'>Home</a></li>
+                       <li><a href='#'>Profile</a></li>
+                       <li><a href='#'>New Post</a></li>
+                       <li><a href="#" id="logout">Log out</a></li>
+                    </ul>
+                    </div>
+            <table class="table" >
+                <thead>
+                    
+                    <!-- <th id="lol" style="border-color: rgba(0, 0, 0, 0.603); background-color: rgba(0, 0, 0, 0.603); font-size: 60px; font-family: Open Sans">Blog Api</th> -->
+                </thead>
+                
+                <tbody id="Tabla_Post" class="tbody"></tbody>
+            </table>
+
+
+
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
