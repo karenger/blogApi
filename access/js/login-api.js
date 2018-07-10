@@ -1,9 +1,14 @@
 //patron para crear una instancia, los () al final permiten invocar la funcion.
-var plantilla = "<tr><td><h3><b>${title}</b></h3><p>${body}</p><a href='profile.html';'>${userId}(${email})</a></td></tr>";
+// var plantilla1 = "<tr><td><h3><b>${title}</b></h3><p>${body}</p><a id='profile'href='profile.html'>${userId}(${email})</a></td></tr>";
 
-var plantillaUsers = "<a href='profile.html';'>${name}(${email})</a>";
+
+var plantillaIndex ="<div class='col-lg-12 col-md-12' ><aside style='border-radius: 20px;'><div class='content-title'style='border-top-left-radius: 20px; border-top-right-radius: 20px'><h3><a href='#'>${title}</a></h3><p style='font-size: 25px'>${body}</p></div><div class='content-footer'><img class='user-small-img' src='image/account.png'><a id= 'profile'href='profile.html'style='font-size: 20px;color: #570d40b9;font-weight:bold'>${userId}</a></div></aside></div>"
+
+var plantillaUser = "<a href='#'>${name}(${email})</a>";
 var plantillaPost = "<h2>${title}</h2><p>${body}</p></td></tr>";
-$.template("postTemplate", plantilla);
+$.template("indexTemplate", plantillaIndex);
+$.template("userTemplate", plantillaUser);
+
 
 var LoginApi = (function () {
     //TODO: Base_Url
@@ -13,6 +18,7 @@ var LoginApi = (function () {
     var PATH_LOGOUT = "/logout";
     var PATH_POST = "/post";
     var PATH_USERS = "/users";
+    var PATH_USERS = "/";
 
     return {
         login: function (email, password) {
@@ -85,31 +91,11 @@ var LoginApi = (function () {
                     url: baseUrl + PATH_POST,
                     headers: {'Authorization': 'Bearer ' + window.localStorage.getItem("token")},
                     success: function (data) {
-  
-                        $.tmpl("postTemplate", data).appendTo("#Tabla_Post");
-                        
+                        $.tmpl("indexTemplate", data).appendTo("#Tabla_Post");
+                        data.forEach(usuario => {
+                            getuser(usuario.userId);
+                        });
                         console.log(data);
-
-                    },
-                    error: function (error) {
-                        reject(error);
-                    }
-                });
-            });
-
-        },
-        getusers: function () {
-            return new Promise(function (resolve, reject) {
-                $.ajax({
-                    method: 'GET',
-                    url: baseUrl + PATH_USERS,
-                 headers: {'Authorization': 'Bearer ' + window.localStorage.getItem("token")},
-                    success: function (data) {
-                       data.forEach(Usuario => {
-                           if (Usuario.id== userId) {
-                               return Usuario.name;
-                           }
-                       });
 
                     },
                     error: function (error) {

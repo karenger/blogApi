@@ -46,6 +46,7 @@ function signup() {
     });
     
 }
+
 window.onload=function () {
     //Validar si existe un token mandarlo al index
     
@@ -55,7 +56,7 @@ window.onload=function () {
     $("#btnSignup").click(function() {
         signup();
     });
-    
+
 }
 window.history.forward=function () {
     //Validar si existe un token mandarlo al index
@@ -66,5 +67,5 @@ window.history.forward=function () {
     $("#btnSignup").click(function() {
         signup();
     });
-    
+
 }

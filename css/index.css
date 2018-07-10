@@ -4,8 +4,8 @@ body {
 	background: #c8c8c8;
 	background: url("../image/fondo.jpg") fixed;
 	background-size: cover;
-	font: 400 12px/12px 'Open Sans', sans-serif;
-}
+	font: 400 12px/12px 'Open Sans', sans-serif; 
+} 
 
 :after,
 :before {
