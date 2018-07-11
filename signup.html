@@ -20,7 +20,6 @@
     <script>
         var token = window.localStorage.getItem("token");
         if (token != null) {
-
             //validar que este activo
             window.location = "index.html";
 
@@ -40,7 +39,7 @@
                 <div class="sign-in-htm">
                         <div class="group"><br>
                                 <label for="user" class="label">Name</label>
-                                <input id="name" type="text" class="input">
+                                <input id="name" type="text" class="input"><span id="span"></span>
                             </div>
 
                     <div class="group">
@@ -58,6 +57,7 @@
                     </div>
 
                     <div class="group">
+                        <input type="button" class="button1" id="btnatras" value="Previous">
                         <input type="button" class="button" id="btnSignup" value="Sign Up">
                     </div>
                     <div class="hr"></div>
