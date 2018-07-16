@@ -12,55 +12,40 @@
 
     <script src="access/js/login-api.js"></script>
     <script src="access/js/login.js"></script>
-    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">    
-    <LINK REL=StyleSheet HREF="css/login.css" TYPE="text/css" >
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <LINK REL=StyleSheet HREF="css/post.css" TYPE="text/css">
+        <LINK REL=StyleSheet HREF="css/menu.css" TYPE="text/css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-
-    <script>
-        var token = window.localStorage.getItem("token");
-        if (token != null) {
-            //validar que este activo
-            window.location = "index.html";
-
-} 
-
-</script>
 </head>
 
-<body >
-    <div class="login-wrap" >
-        <div class="login-html" >
-
-            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
-            <label for="tab-1" class="tab">Sign In</label>
+<body>
+    <div class="login-wrap">
+        <div class="login-html">
             
-
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+            <label for="tab-1" class="tab">NEW POST</label>
             <div class="login-form">
                 <div class="sign-in-htm">
                     <div class="group">
-                        
-                        <label for="user" class="label">Email</label>
-                        <input id="email" type="text" class="input">
+                        <label for="user" class="label">Title</label>
+                        <input id="name" type="text" class="input">
                     </div>
                     <div class="group">
-                        <label for="pass" class="label">Password</label>
-                        <input id="password" type="password" class="input" data-type="password"></br></br>
-                        <a class="label" href="signup.html">+Sign up</a>
+                        <label for="user" class="label">Description</label>
+                        <textarea class="input" rows="6" id="comment"></textarea>
                     </div>
                     <div class="group">
-                            
-                    
-                        <input type="button" class="button" id="btnLogin"value="Sign In">
+                            <input type="button" class="button1" id="btnatras" value="Previous">
+                        <input type="button" class="button" id="btnSignup" value="Post">
+
                     </div>
                     <div class="hr"></div>
                 </div>
-        
-                </div>
+
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
