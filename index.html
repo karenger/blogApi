@@ -18,10 +18,12 @@
     <LINK REL=StyleSheet HREF="css/menu.css" TYPE="text/css">
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script>
-
+        
         window.onload = function logout(params) {
             var token = window.localStorage.getItem("token");
+            
             LoginApi.getpost(token)
+
             
             $("#logout").click(() => {
                 LoginApi.logout(token)
@@ -52,8 +54,9 @@
                                         </li>
                                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Profile </a>
                                     <div  style="background-color: #570d40b9 !important; font-family: 'open sans'!important; color: white !important" class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-                                        <a  style=" font-weight: bold; font-size: 30px !important;  margin-top: 2% !important; margin-bottom: 3% !important; font-family: 'open sans' ,bold, cursive! important; color: white !important"class="dropdown-item" id= "logout" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
-                                    </div>
+                                        <a  style=" font-weight: bold; font-size: 30px !important;  margin-top: 2% !important; margin-bottom: 3% !important; font-family: 'open sans' ,bold, cursive! important; color: white !important"class="dropdown-item" id= "Setting" href="#"><i class="fa fa-cog" aria-hidden="true"></i> Setting</a>
+                                    <a  style=" font-weight: bold; font-size: 30px !important;  margin-top: 2% !important; margin-bottom: 3% !important; font-family: 'open sans' ,bold, cursive! important; color: white !important"class="dropdown-item" id= "logout" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a>
+                                        </div>
                                 
                             </ul>
                     </nav>

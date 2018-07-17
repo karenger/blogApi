@@ -1,0 +1,105 @@
+
+body {
+	margin: 20px;
+	color: goldenrod;
+	background: #c8c8c8;
+	background: url("../image/fondo.jpg") fixed;
+	background-size: 90%;
+	font: 400 12px/12px 'Open Sans', sans-serif; 
+}
+.login-form .group .textarea {
+	color: white;
+	font-size: 18px;
+	size: 12px;
+	font-family: 'Open sans';
+}
+.login-form .group .input {
+	color: white;
+	font-size: 16px;
+	font-family: 'Open sans'; 
+}
+
+.login-form .group .button {
+	background: #570d40b9;
+	font-size: 30px;
+	font-family: 'Open San';
+}
+:after,
+:before {
+	box-sizing: border-box
+
+}
+
+.clearfix:after,
+.clearfix:before {
+	content: '';
+	display: table
+}
+
+.clearfix:after {
+	clear: both;
+	display: block
+}
+
+a {
+	color: inherit;
+	text-decoration: none
+}
+
+.login-wrap {
+	
+	width: 100%;
+	margin: auto;
+	max-width: 100%;
+	min-height: 0%;
+	position: relative;
+	background: url("../image/fondo.jpg") no-repeat center;
+	background-size: cover;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+}
+
+.login-html {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	padding: 1px ;
+	background:rgba(187, 98, 175, 0.767) ;
+	/* #b285af */
+}
+.table{
+	
+	position: absolute;
+	font-family: 'Open sans';
+	color: white;
+	padding: 10%;
+	
+
+}
+	
+/* FORMATO DE LOS COMENTARIO */
+	.content-title{padding:5px;background-color:  #f3bdf3; color: #570d40b9;}
+	.content-footer{ background-color: solid#570d40b9 ;padding:10px;position: relative;}
+	aside{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	-webkit-box-shadow: 1px 4px 16px 3px rgb(10, 4, 10);;
+	-moz-box-shadow: 1px 4px 16px 3px rgb(10, 4, 10);;
+	box-shadow: 1px 4px 16px 3px rgb(10, 4, 10);
+}
+	aside .content-footer>img {
+		width: 33px;
+		height: 33px;
+		border-radius: 100%;
+		margin-right: 10px;
+		border: 2px solid black;
+	}
+	
+.mensaje{ 
+	text-align: center;
+	font-family: 'Open sans';
+	font-size: 30px;
+	font-weight: bold;
+	color: white;
+
+
+	}

@@ -12,6 +12,7 @@
 
     <script src="access/js/login-api.js"></script>
     <script src="access/js/login.js"></script>
+    <script src="access/js/password.js"></script>
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">    
     <LINK REL=StyleSheet HREF="css/login.css" TYPE="text/css" >
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -28,7 +29,7 @@
 </script>
 </head>
 
-<body >
+<body ><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <div class="login-wrap" >
         <div class="login-html" >
 
@@ -41,11 +42,22 @@
                     <div class="group">
                         
                         <label for="user" class="label">Email</label>
-                        <input id="email" type="text" class="input">
+                        <input id="email" type="text" class="input" style="width: 100% !important">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
-                        <input id="password" type="password" class="input" data-type="password"></br></br>
+                        <input id="password" type="password" style="width: 90%!important;  border-top-right-radius: 0px !important;border-bottom-right-radius: 0px !important;border-bottom-right-radius: 25px !important;border-bottom-right-radius: 0px !important;" class="input"  aria-describedby="password_visibility" aria-label="Username" >
+                        <button style="border: none!important;
+                        padding: 18px 15px 13px 15px !important;
+                        border-top-right-radius: 25px !important; 
+                        box-shadow: 0 0 1em #570d40b9!important;
+                        -webkit-box-shadow: 0 0 1em #570d40b9!important;
+                        outline:0px !important;
+                        border-bottom-right-radius: 25px !important;
+                       background-color: #570d40b9 !important; border-color: #570d40b9 !important"  class="input-group-addon fa fa-eye btn btn-primary btn-sm bg-primary text-white" id="password_visibility"></button> 
+                    
+                    
+                    </br></br>
                         <a class="label" href="signup.html">+Sign up</a>
                     </div>
                     <div class="group">
