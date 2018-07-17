@@ -5,6 +5,7 @@ body {
 	background: url("../image/fondo.jpg") fixed;
 	background-size: cover;
 	font: 400 12px/12px 'Open Sans', sans-serif; 
+	
 } 
 
 :after,
@@ -55,6 +56,6 @@ a {
 	font-family: 'Open sans';
 	color: white;
 	padding: 10%;
-	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
+
 }
 

@@ -45,7 +45,7 @@ a {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	padding: 45px;
+	padding: 35px;
 	background: rgba(187, 98, 175, 0.767);
 }
 
@@ -70,7 +70,8 @@ a {
 
 .login-html .tab,
 .login-form .group .label,
-.login-form .group .button {
+.login-form .group .button,
+.login-form .group .button1 {
 	text-transform: uppercase;
 }
 
@@ -84,13 +85,25 @@ a {
 	display: inline-block;
 	border-bottom: 2px solid transparent;
 }
-
+/* Linea debajo del titulo */
 .login-html .sign-in:checked+.tab {
 	color: #fff;
 	border-color: #570d40b9;
 	padding: 20px;
 }
 .input:focus {
+	border-color: #570d40b9;
+	box-shadow: 0 0 1em #570d40b9;
+	-webkit-box-shadow: 0 0 1em #570d40b9;
+	outline:0px;
+}
+.button:focus {
+	border-color: #570d40b9;
+	box-shadow: 0 0 1em #570d40b9;
+	-webkit-box-shadow: 0 0 1em #570d40b9;
+	outline:0px;
+}
+.button1:focus {
 	border-color: #570d40b9;
 	box-shadow: 0 0 1em #570d40b9;
 	-webkit-box-shadow: 0 0 1em #570d40b9;
@@ -109,29 +122,57 @@ a {
 	margin-bottom: 20px;
 }
 
+
+.login-form .group .input
+  {
+	
+	color: #fff;
+	/* permite salto de linea en botones */
+	/* display: block; */
+	
+}
 .login-form .group .label,
-.login-form .group .input,
-.login-form .group .button {
+.login-form .group .button,
+.login-form .group .button1  {
 	width: 100%;
 	color: #fff;
-	display: block;
+	/* permite salto de linea en botones */
+	/* display: block; */
 	
 }
 
 .login-form .group .input,
-.login-form .group .button {
+.login-form .group .button, 
+.login-form .group .button1 {
 	border: none;
 	border-color: #570d40b9;
 	padding: 12px 20px;
 	border-radius: 25px;
 	background: rgba(255, 255, 255, .1);
 }
-.login-form .group .button {
+.login-form .group .button{
+	width: 40%;
+	margin-left: 90px;
 	border: none;
+	font-size: 25px;
 	border-color: #570d40b9;
 	padding: 19px 20px;
 	border-radius: 25px;
 	background: rgba(255, 255, 255, .1);
+	background: #570d40b9;
+	font-family: 'Open San';
+}
+.login-form .group .button1 {
+	width: 40%;
+	margin-left: 4px;
+	border: none;
+	font-size: 25px;
+	border-color: #570d40b9;
+	padding: 19px 20px;
+	border-radius: 25px;
+	background: rgba(255, 255, 255, .1);
+	background: #570d40b9;
+	font-family: 'Open San';
 }
 
 .login-form .group input[data-type="password"] {
@@ -149,12 +190,6 @@ a {
 	font-family: 'Open sans';
 }
 ::placeholder { color:rgba(253, 253, 253, 0.788); }
-
-.login-form .group .button {
-	background: #570d40b9;
-	font-size: 30px;
-	font-family: 'Open San';
-}
 
 .login-form .group label .icon {
 	width: 15px;

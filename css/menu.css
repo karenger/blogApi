@@ -14,3 +14,12 @@
 .darken-grey-text {
     color: #2E2E2E;
 }
+.dropdown-item:hover { 
+    background-color: #7e1e5fb9 !important; 
+    color: white ;
+    
+} 
+
+
+
+

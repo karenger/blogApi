@@ -118,13 +118,21 @@ a {
 	margin-bottom: 40px;
 }
 
+.login-form .group .input
+  {
+	
+	color: #fff;
+	/* permite salto de linea en botones */
+	/* display: block; */
+	
+}
 .login-form .group .label,
-.login-form .group .input,
-.login-form .group .button {
+.login-form .group .button,
+.login-form .group .button1  {
 	width: 100%;
 	color: #fff;
-	display: block;
-	
+	/* permite salto de linea en botones */
+	/* display: block; */
 	
 }
 

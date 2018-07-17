@@ -1,5 +1,14 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+a :hover{
+	color:black;
+}
+.dropdown-item:hover { 
+    background-color: #7e1e5fb9 !important; 
+    color: white ;
+    
+} 
 body {
-	margin: 40px;
+	margin: 20px;
 	color: #edf3ff;
 	background: #c8c8c8;
 	background-image: url("../image/fondo.jpg") ;
@@ -29,27 +38,32 @@ a {
 	text-decoration: none
 }
 
-.login-wrap {
-	
-	width: 100%;
+.login1{
 	margin: auto;
-	max-width: 600px;
-	min-height: 530px;
+	max-width: 500px;
+	min-height: 400px;
 	position: relative;
-	background: url("../image/fondo.jpg") no-repeat center;
 	background-size: cover;
+	
+}
+.login-wrap {
+
+	background: url("../image/fondo.jpg") no-repeat center;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
 .login-html {
+	background: rgba(187, 98, 175, 0.767);
+}
+.login2 {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	padding: 50px;
-	background: rgba(187, 98, 175, 0.767);
+	padding: 20px;
+	
 }
 
-.login-html .sign-in-htm {
+.login2 .sign-in-htm {
 	top: 0;
 	left: 0;
 	right: 0;
@@ -63,18 +77,18 @@ a {
 	transition: all .4s linear;
 }
 
-.login-html .sign-in,
+.login2 .sign-in,
 .login-form .group .check {
 	display: none;
 }
 
-.login-html .tab,
+.login2 .tab,
 .login-form .group .label,
 .login-form .group .button {
 	text-transform: uppercase;
 }
 
-.login-html .tab {
+.login2 .tab {
 	
 	font-size: 50px;
 	font-family: 'Open sans';
@@ -87,7 +101,7 @@ a {
 	border-bottom: 2px solid transparent;
 }
 
-.login-html .sign-in:checked+.tab {
+.login2 .sign-in:checked+.tab {
 	color: #fff;
 	border-color: #570d40b9;
 	padding: 20px;
@@ -116,7 +130,7 @@ a {
 .login-form .group .input,
 .login-form .group .button {
 	width: 100%;
-	color: #fff;
+	color: #fff;border: none;
 	display: block;
 	
 	
@@ -150,13 +164,13 @@ a {
 	font-family: 'Open sans';
 }
 .login-form .group .input {
-	color: white;
+	color: white;border: none;
 	font-size: 16px;
 	font-family: 'Open sans';
 }
 
-.login-form .group .button {
-	background: #570d40b9;
+.login-form .group .button {outline:0px;
+	background: #570d40b9;border: none;
 	font-size: 30px;
 	font-family: 'Open San';
 }
@@ -216,12 +230,12 @@ a {
 	transform: scale(1) rotate(-45deg);
 }
 
-.login-html .sign-in:checked+.tab+.login-form .sign-in-htm {
+.login2 .sign-in:checked+.tab+.login-form .sign-in-htm {
 	-webkit-transform: rotate(0);
 	transform: rotate(0);
 }
 
-.login-html .for-pwd:checked {
+.login2 .for-pwd:checked {
 	-webkit-transform: rotate(0);
 	transform: rotate(0);
 }
@@ -234,3 +248,5 @@ a {
 
 .foot-lnk {
 	text-align: center;}
+
+	
